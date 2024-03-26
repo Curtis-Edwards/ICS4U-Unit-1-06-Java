@@ -66,7 +66,10 @@ final class Statistics {
     * @return the mode of the integers
     */
     public static List<Integer> mode(final Integer[] numbers) {
-	List<Integer> modes = new ArrayList<>(0, 1, 2);
+	List<Integer> modes = new ArrayList<>();
+	// Adding two elements to the list
+        modes.add(1);
+        modes.add(2);
         return modes;
     }
 
