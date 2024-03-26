@@ -30,8 +30,7 @@ final class Statistics {
     * Throw an exception IllegalStateException.
     * if this ever is called
     *
-    * @throws IllegalStateException if  attempt is
-    * made to instantiate the class
+    * @throws IllegalStateException if instantiation is attempted
     */
     private Statistics() {
         throw new IllegalStateException("Cannot be instantiated");
