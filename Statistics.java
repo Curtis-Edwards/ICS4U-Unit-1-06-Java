@@ -124,14 +124,14 @@ final class Statistics {
         System.out.println(Arrays.toString(arrayOfNumbers));
 
         System.out.println("\nCalculating stats...");
-        final double mean = mean(arrayOfNumbers);
+        /*final double mean = mean(arrayOfNumbers);
         final double median = median(arrayOfNumbers);
         final List<Integer> mode = mode(arrayOfNumbers);
 
         System.out.println("The mean is: " + mean);
         System.out.println("The median is: " + median);
         System.out.println("The mode(s) is/are: "
-                            + Arrays.toString(mode.toArray()));
+                            + Arrays.toString(mode.toArray()));*/
 
         System.out.println("\nDone.");
     }
