@@ -30,7 +30,7 @@ final class Statistics {
     * Throw an exception IllegalStateException.
     * if this ever is called
     *
-    * @throws IllegalStateException if an attempt is 
+    * @throws IllegalStateException if  attempt is
     * made to instantiate the class
     */
     private Statistics() {
