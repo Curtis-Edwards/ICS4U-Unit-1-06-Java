@@ -44,7 +44,7 @@ final class Statistics {
     * @return the mean of the integers
     */
     public static double mean(final Integer[] arrayOfIntegers) {
-		double sum = 0;
+        double sum = 0;
         for (int i = 0; i < arrayOfIntegers.length; i++) {
             sum += arrayOfIntegers[i];
         }
@@ -61,8 +61,8 @@ final class Statistics {
         double median = 0;
         Arrays.sort(arrayOfIntegers);
         if (arrayOfIntegers.length % 2 == 0) {
-            median = (arrayOfIntegers[arrayOfIntegers.length / 2] +
-                      arrayOfIntegers[arrayOfIntegers.length / 2 - 1]) / 2.0;
+            median = (arrayOfIntegers[arrayOfIntegers.length / 2]
+                      + arrayOfIntegers[arrayOfIntegers.length / 2 - 1]) / 2.0;
         } else {
             median = arrayOfIntegers[arrayOfIntegers.length / 2];
         }
@@ -76,12 +76,12 @@ final class Statistics {
     * @return the mode of the integers
     */
     public static List<Integer> mode(final Integer[] numbers) {
-	List<Integer> modes = new ArrayList<>();
-        Map<Integer, Integer> occurrences = new HashMap<>();
+        final List<Integer> modes = new ArrayList<>();
+        final Map<Integer, Integer> occurrences = new HashMap<>();
         int highestOccurrences = 0;
 
         for (int counter : numbers) {
-            int count = occurrences.getOrDefault(counter, 0) + 1;
+            final int count = occurrences.getOrDefault(counter, 0) + 1;
             occurrences.put(counter, count);
             if (count > highestOccurrences) {
                 highestOccurrences = count;
