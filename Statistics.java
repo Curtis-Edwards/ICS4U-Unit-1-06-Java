@@ -3,9 +3,9 @@
 * This is a program that calculates mean, median and mode
 * after reading in a text file into an array.
 *
-* @author  Mr Coxall
+* @author  Curtis Edwards
 * @version 1.0
-* @since   2020-01-01
+* @since   2024-03-26
 */
 
 import java.io.BufferedReader;
@@ -66,7 +66,7 @@ final class Statistics {
     * @return the mode of the integers
     */
     public static List<Integer> mode(final Integer[] numbers) {
-	List<Integer> modes = new ArrayList<>();
+	List<Integer> modes = new ArrayList<>(0, 1, 2);
         return modes;
     }
 
