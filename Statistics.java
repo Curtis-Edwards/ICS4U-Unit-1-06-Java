@@ -106,7 +106,7 @@ final class Statistics {
     public static void main(final String[] args) {
         Integer tempNumber;
         final ArrayList<Integer> listOfNumbers = new ArrayList<Integer>();
-        final Path filePath = Paths.get("../", args[0]);
+        final Path filePath = Paths.get("./", args[0]);
         final Charset charset = Charset.forName("UTF-8");
 
         try (BufferedReader reader = Files.newBufferedReader(
