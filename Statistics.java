@@ -43,7 +43,7 @@ final class Statistics {
     * @param arrayOfIntegers the collection of integers
     * @return the mean of the integers
     */
-    public static double mean(final Integer[] arrayOfIntegers) {
+    /*public static double mean(final Integer[] arrayOfIntegers) {
 		double sum = 0;
         for (int i = 0; i < arrayOfIntegers.length; i++) {
             sum += arrayOfIntegers[i];
@@ -57,7 +57,7 @@ final class Statistics {
     * @param arrayOfIntegers the collection of integers
     * @return the median of the integers
     */
-    public static double median(final Integer[] arrayOfIntegers) {
+    /*public static double median(final Integer[] arrayOfIntegers) {
         double median = 0;
         Arrays.sort(arrayOfIntegers);
         if (arrayOfIntegers.length % 2 == 0) {
@@ -75,7 +75,7 @@ final class Statistics {
     * @param numbers the collection of integers
     * @return the mode of the integers
     */
-    public static List<Integer> mode(final Integer[] numbers) {
+    /*public static List<Integer> mode(final Integer[] numbers) {
 	List<Integer> modes = new ArrayList<>();
         Map<Integer, Integer> occurrences = new HashMap<>();
         int highestOccurrences = 0;
@@ -124,14 +124,17 @@ final class Statistics {
         System.out.println(Arrays.toString(arrayOfNumbers));
 
         System.out.println("\nCalculating stats...");
-        final double mean = mean(arrayOfNumbers);
+		System.out.println(arrayOfNumbers);
+		System.out.println(arrayOfNumbers.length);
+	
+        /*final double mean = mean(arrayOfNumbers);
         final double median = median(arrayOfNumbers);
         final List<Integer> mode = mode(arrayOfNumbers);
 
         System.out.println("The mean is: " + mean);
         System.out.println("The median is: " + median);
         System.out.println("The mode(s) is/are: "
-                            + Arrays.toString(mode.toArray()));
+                            + Arrays.toString(mode.toArray()));*/
 
         System.out.println("\nDone.");
     }
