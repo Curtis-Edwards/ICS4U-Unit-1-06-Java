@@ -44,8 +44,11 @@ final class Statistics {
     * @return the mean of the integers
     */
     public static double mean(final Integer[] arrayOfIntegers) {
-        final double mean = 0;
-        return mean;
+		double sum = 0;
+        for (int i = 0; i < arrayOfIntegers.length; i++) {
+            sum += arrayOfIntegers[i];
+        }
+        return sum / arrayOfIntegers.length;
     }
 
     /**
@@ -55,7 +58,14 @@ final class Statistics {
     * @return the median of the integers
     */
     public static double median(final Integer[] arrayOfIntegers) {
-        final double median = 0;
+        double median = 0;
+        Arrays.sort(arrayOfIntegers);
+        if (arrayOfIntegers.length % 2 == 0) {
+            median = (arrayOfIntegers[arrayOfIntegers.length / 2] +
+                      arrayOfIntegers[arrayOfIntegers.length / 2 - 1]) / 2.0;
+        } else {
+            median = arrayOfIntegers[arrayOfIntegers.length / 2];
+        }
         return median;
     }
 
@@ -67,10 +77,25 @@ final class Statistics {
     */
     public static List<Integer> mode(final Integer[] numbers) {
 	List<Integer> modes = new ArrayList<>();
-	// Adding two elements to the list
-        modes.add(1);
-        modes.add(2);
+        Map<Integer, Integer> occurrences = new HashMap<>();
+        int highestOccurrences = 0;
+
+        for (int counter : numbers) {
+            int count = occurrences.getOrDefault(counter, 0) + 1;
+            occurrences.put(counter, count);
+            if (count > highestOccurrences) {
+                highestOccurrences = count;
+            }
+        }
+
+        for (Map.Entry<Integer, Integer> entry : occurrences.entrySet()) {
+            if (entry.getValue() == highestOccurrences) {
+                modes.add(entry.getKey());
+            }
+        }
+
         return modes;
+
     }
 
     /**
